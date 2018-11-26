@@ -50,7 +50,7 @@ export default class HomeScreen extends React.Component {
             </View> */}
 
             <Text style={styles.getStartedText}>
-              WTF is up World :), showing on that Android phone! Yep!! Below are a few links to my awesome work!
+              WTF is up World :), showing on that Android phone! Yep! Below are a few links to my awesome work! Which needs to be optimized for mobile ASAP!
 
             </Text>
             
