@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
             </View>
 
             <Text style={styles.getStartedText}>
-        WTF is up World
+              WTF is up World?
             </Text>
           </View>
 
