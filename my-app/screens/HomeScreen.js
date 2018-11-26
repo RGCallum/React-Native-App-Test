@@ -25,41 +25,68 @@ export default class HomeScreen extends React.Component {
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  ? require('../assets/images/IndiaGPic3.jpg')
+                  : require('../assets/images/IndiaGPic3.jpg')
               }
               style={styles.welcomeImage}
             />
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
+            {/* {this._maybeRenderDevelopmentModeWarning()} */}
 
-            <Text style={styles.getStartedText}>Get started by opening</Text>
+            <Text style={styles.getStartedText}>Rashaunda's React Native App</Text>
+            
+{/* <Image
+                  source={
+                    __DEV__
+                  ? require('../assets/images/blueFlower.jpeg')
+                  : require('../assets/images/blueFlower.jpeg')
 
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            }
+/> */}
+            {/* <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
-            </View>
+            </View> */}
 
             <Text style={styles.getStartedText}>
-              WTF is up World?
+              WTF is up World :), showing on that Android phone! Yep!! Below are a few links to my awesome work!
+
             </Text>
+            
           </View>
 
           <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
+            <TouchableOpacity onPress={this._handleGamePress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>Major Keys Game!</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress={this._handleSceneItPress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>SceneIt Pictures Website</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this._handlePicListPress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>PicList Photographer Database</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this._handleNoBuPress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>NoBu Filmmakers Database</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this._handleRGCallumPress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>Rashaunda Portfolio Page</Text>
+            </TouchableOpacity>
+
           </View>
         </ScrollView>
 
-        <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
+        {/* <View style={styles.tabBarInfoContainer}>
+          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
           </View>
-        </View>
+        </View> */}
       </View>
     );
   }
@@ -91,9 +118,29 @@ export default class HomeScreen extends React.Component {
     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
   };
 
-  _handleHelpPress = () => {
+  _handleGamePress = () => {
     WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
+      'https://flamboyant-lichterman-f9a2cd.netlify.com/'
+    );
+  };
+  _handleSceneItPress = () => {
+    WebBrowser.openBrowserAsync(
+      'https://sharp-fermat-910ea8.netlify.com/index.html'
+    );
+  };
+  _handlePicListPress = () => {
+    WebBrowser.openBrowserAsync(
+      'https://gentle-lake-52243.herokuapp.com/'
+    );
+  };
+  _handleNoBuPress = () => {
+    WebBrowser.openBrowserAsync(
+      'https://nobu-filmmakers.herokuapp.com/'
+    );
+  };
+  _handleRGCallumPress = () => {
+    WebBrowser.openBrowserAsync(
+      'https://rgcallum.github.io/'
     );
   };
 }
